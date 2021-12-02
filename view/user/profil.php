@@ -1,3 +1,8 @@
+<?php
+    session_name('nuitexpress');
+    session_start();
+?>
+
 <p>id : <?php $_SESSION['id'] ?> </p>
 <p>Pseudo : <?php $_SESSION['pseudo'] ?> </p>
 <p>Email : <?php $_SESSION['email'] ?> </p>
