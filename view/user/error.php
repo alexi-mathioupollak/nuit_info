@@ -7,7 +7,6 @@
     <body>
         <div>
         <?php
-        
             echo 'Erreur';
         ?>
         </div>

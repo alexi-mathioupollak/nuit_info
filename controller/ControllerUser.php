@@ -33,7 +33,7 @@ class ControllerUser {
       public static function profil() {
         $pagetitle = 'SauveteurExpress - Profil';
         $controller='user';
-        $view='login';
+        $view='profil';
         require File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
         
   }
