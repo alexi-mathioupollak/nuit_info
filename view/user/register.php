@@ -1,12 +1,10 @@
 <?php
-session_name('pollexpress');
-//session_start();
-
-require_once '/public_html/nuit_express/config/BDD.php';
 
 
+    require_once './config/BDD.php';
 
-  if ((isset($_SESSION['id'])) && ($_SESSION['confirmation_token']==1)){ //si une session existe déja (= utilisateur connecté) on redirige vers la page d'accueil
+
+  if ((isset($_SESSION['id']))){ //si une session existe déja (= utilisateur connecté) on redirige vers la page d'accueil
     header('Location: ../index.php');
     exit;
   }
@@ -33,7 +31,7 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
       else{
 
         //Verif que le pseudo existe pas déjà
-		$stmt = $pdo->prepare("SELECT * FROM User WHERE pseudo=?");
+		$stmt = $pdo->prepare("SELECT * FROM NDI__User WHERE pseudo=?");
 		$stmt->execute([$pseudo]); 
 		$req_pseudo = $stmt->fetch();
 		if ($req_pseudo) {
@@ -55,7 +53,7 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
       }else{
       		
         //On check dans la base de donnée si le mail existe déjà
-		$stmt = $pdo->prepare("SELECT * FROM User WHERE email=?");
+		$stmt = $pdo->prepare("SELECT * FROM NDI__User WHERE email=?");
 		$stmt->execute([$email]); 
 		$req_email = $stmt->fetch();
 		if ($req_email) {
@@ -84,38 +82,21 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
       //on execute la requete sql si toutes les conditions sont valides
       if($ok){
 
-        $mdp = crypt($mdp, '$6$rounds=5000$pollexpresslesangdelaveine$'); //cryptage du mdp
+        $mdp = crypt($mdp, '$6$rounds=5000$nuitexpressSauveteurExpress$'); //cryptage du mdp
         $datecreation = date('Y-m-d H:i:s');
         $token = bin2hex(random_bytes(12));
 
-        $req = $pdo->prepare("INSERT INTO User
-        SET pseudo = :pseudo, motdepasse = :motdepasse, email = :email, date_creation = :datecreation, argent = 100, isVerified = false, token = :token");
-        $req->execute(array('pseudo' => $pseudo, 'motdepasse' => $mdp, 'email' => $email, 'datecreation' => $datecreation, 'token' => $token));
+        $req = $pdo->prepare("INSERT INTO NDI__User
+        SET pseudo = :pseudo, motdepasse = :motdepasse, email = :email, date_creation = :datecreation");
+        $req->execute(array('pseudo' => $pseudo, 'motdepasse' => $mdp, 'email' => $email, 'datecreation' => $datecreation));
 
 
-        $reqtoken = $pdo->prepare("SELECT * FROM User WHERE email = :email");
-        $reqtoken->execute(array('email' => $email));
-        $reqtoken = $reqtoken->fetch();
-
-        $mailconf = $reqtoken['email'];
-
-
-        $header = "From: PollExpress <tristan.gaido.pro@gmail.com>\n";
-        $header .= "MIME-version: 1.0\n";
-        $header .= "Content-type: text/html; charset=utf-8\n";
-        $header .= "Content-Transfer-ncoding: 8bit";
-
-        $contenu = '<p>Bonjour ' . $reqtoken['pseudo'] . ',</p><br>
-                    <p>CLiquez ici pour confirmer votre compte <a href="https://webinfo.iutmontp.univ-montp2.fr/~gaidot/PollExpress/view/user/verifmail.php?id=' . $reqtoken['id'] . '&token=' . $token . '">Valider</a><p>';
-        mail($mailconf, 'Confirmation de votre compte', $contenu, $header);
-
-
-        $_SESSION['confirmation_token'] = htmlentities($reqtoken['confirmation_token']);
+        
         
 
         
 
-        header('Location: https://webinfo.iutmontp.univ-montp2.fr/~gaidot/PollExpress/index.php?action=redirectionmail.php'); //redirection vers la page
+        header('Location: ./index.php?controller=user&action=login'); //redirection vers la page
         exit;
       }
     }
@@ -142,7 +123,7 @@ if(!empty($_POST)){ //si le formulaire est vide ne rien faire
             <div class="block-heading" style="height: -5px;">
                 <h2 class="text-info" style="text-align: center;"><strong>S'inscrire</strong></h2>
             </div>
-            <p style="text-align: center;">Remplissez ce formulaire pour créer votre compte PollExpress.<br></p>
+            <p style="text-align: center;">Remplissez ce formulaire pour créer votre compte SauveteurExpress.<br></p>
             <form method="post">
                 <?php
                 if (isset($er_pseudo)){
