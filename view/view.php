@@ -1,5 +1,5 @@
 <?php
-    session_name('pollexpress');
+    session_name('nuitexpress');
     session_start();
 ?>
 
@@ -30,11 +30,16 @@
                         if(isset($_SESSION['id'])){
                             ?>
                                 <li class="nav-item"><a class="nav-link active" href="./index.php">Accueil</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="./index.php?action=sauveteurs">Sauveteurs</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="./index.php?action=profil">Profil</a></li>
                                 <li class="nav-item"><a class="nav-link active" href="./index.php?action=deconnexion">Déconnexion</a></li>
 
                             <?php
                         }else{
                             ?>
+                            <li class="nav-item"><a class="nav-link active" href="./index.php">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="./index.php?action=login">Connexion</a></li>
+
 
                             <?php
                         }
@@ -45,14 +50,16 @@
     </nav>
         <div class="content">
                 <?php
+
                 $filepath = File::build_path(array("view", $controller, "$view.php"));
                 require $filepath;
+
                 ?>
             
         </div>    
             <footer class="page-footer dark">
         <div class="footer-copyright">
-            <p>© 2021 PollExpress</p>
+            <p>© 2021 SauveteurExpress</p>
         </div>
     </footer>
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>

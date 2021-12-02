@@ -1,9 +1,8 @@
 <?php
 
-  require_once '/home/ann2/gaidot/public_html/nuit_express/config/BDD.php';
+    require_once './config/BDD.php';
 
-  if ((isset($_SESSION['id']))
-  ){ //si une session existe déja (= utilisateur connecté) on redirige vers la page d'accueil
+  if ((isset($_SESSION['id']))){ //si une session existe déja (= utilisateur connecté) on redirige vers la page d'accueil
     header('Location: ./index.php');
     exit;
   }
@@ -30,19 +29,13 @@
       $ok = false;
       $er_mdp = "Le mot de passe est vide";
     }
-    else{
-        $sql = $pdo->prepare("SELECT * FROM User WHERE email=?");
-        $sql->execute([$email]); 
-        $testtoken = $sql->fetch();
-        if($testtoken['confirmation_token']==0){
-          $ok = false;
-          $er_mdp = "Votre compte n'est pas validé. Veuillez cliquer sur le lien dans votre boite mail.";
-        }
-      }
+      
+        
+      
 
-    $mdp= crypt($mdp, '$6$rounds=5000$pollexpresslesangdelaveine$'); //on crypte le mdp avec la meme clé que pour l'inscription
+    $mdp= crypt($mdp, '$6$rounds=5000$nuitexpressSauveteurExpress$'); //on crypte le mdp avec la meme clé que pour l'inscription
 
-    $req = $pdo->prepare("SELECT * FROM User WHERE email = :email AND motdepasse = :mdp"); 
+    $req = $pdo->prepare("SELECT * FROM NDI__User WHERE email = :email AND motdepasse = :mdp"); 
     $req->execute(array('email' => $email, 'mdp' => $mdp));
     $resultat = $req->fetch();
     //on test si les valeurs du formulaire correspondent a la bdd
@@ -57,11 +50,7 @@
       $_SESSION['id'] = $resultat['id']; 
       $_SESSION['pseudo'] = htmlentities($resultat['pseudo']); //htmlentities pour éviter les injections html/php
       $_SESSION['email'] = htmlentities($resultat['email']);
-      $_SESSION['isVerified'] = htmlentities($resultat['isVerified']);
-      $_SESSION['argent'] = htmlentities($resultat['argent']);
-      $_SESSION['confirmation_token'] = $resultat['confirmation_token'];
       $_SESSION['date'] = htmlentities($resultat['date_creation']);
-      $_SESSION['xp'] = htmlentities($resultat['xp']);
 
 
 
@@ -70,6 +59,7 @@
     }
   }
 }
+
 ?>
 
 
@@ -93,7 +83,7 @@
             <div class="block-heading" style="height: -5px;">
                 <h2 class="text-info" style="text-align: center;"><strong>Se connecter</strong></h2>
             </div>
-            <p style="text-align: center;">Connectez vous à votre compte PollExpress<br></p>
+            <p style="text-align: center;">Connectez vous à votre compte SauveteurExpress<br></p>
             <form method="post">
               <?php
               if (isset($er_email)){ //si $er_mail n'est pas vide, alors on l'affiche
