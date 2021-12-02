@@ -1,13 +1,6 @@
-<?php
+<p>id : <?php $_SESSION['id'] ?> </p>
+<p>Pseudo : <?php $_SESSION['pseudo'] ?> </p>
+<p>Email : <?php $_SESSION['email'] ?> </p>
+<a href="./index.php?action=profil">Changer le mot de passe</a>
 
-    if ((isset($_SESSION['id']))){ //si une session existe déja (= utilisateur connecté) on redirige vers la page d'accueil
-      echo '<p>id : $_SESSION['id']</p>';
-      echo '<p>Pseudonyme : $_SESSION['pseudo']</p>';
-      echo '<p>Email : $_SESSION['email']</p>';
-    }
-
-    
-
-
-?>
 <p>test</p>
