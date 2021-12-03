@@ -1,20 +1,9 @@
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
 <form method="post">
   <div class="mb-3"><label class="form-label" for="email"><strong style="margin-right: 10px;">Identifiant</strong><br></label><?= $_SESSION['id'] ?></div>
   <div class="mb-3"><label class="form-label" for="email"><strong style="margin-right: 10px;">Pseudo</strong><br></label><?= $_SESSION['pseudo'] ?></div>
