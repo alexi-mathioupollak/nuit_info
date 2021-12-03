@@ -61,7 +61,7 @@
         </div>    
             <footer class="page-footer dark">
         <div class="footer-copyright">
-            <p>© 2021 SauveteurExpress</p>
+                    <a href="./assets/img/meme_easteregg.jpg"><p>© 2021 SauveteurExpress</p></a>
         </div>
     </footer>
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
