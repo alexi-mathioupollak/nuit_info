@@ -1,9 +1,6 @@
 <br/><br/>
 <br/><br/>
 <br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
 <form method="post">
   <div class="mb-3"><label class="form-label" for="email"><strong style="margin-right: 10px;">Identifiant</strong><br></label><?= $_SESSION['id'] ?></div>
   <div class="mb-3"><label class="form-label" for="email"><strong style="margin-right: 10px;">Pseudo</strong><br></label><?= $_SESSION['pseudo'] ?></div>
@@ -13,5 +10,10 @@
 <a class="nav-link active" href="./index.php?action=resetmdp">Changer de mot de passe</a>
 <a class="nav-link active" href="./index.php?action=resetpseudo">Changer le pseudo</a>
 <a class="nav-link active" href="./index.php?action=resetemail">Changer l'adresse mail</a>
+<<<<<<< HEAD
 <a class="nav-link active" href="./index.php?action=deletedaccount">Supprimer le compte et ses données associées</a>
 <p>test</p>
+=======
+<a class="nav-link active" href="./index.php?action=deleteaccount">Supprimer le compte et ses données associées</a>
+<p>test</p>
+>>>>>>> 253ebb5c9bf3fd5efe9c3ae67c6f60ed4bb59abe
