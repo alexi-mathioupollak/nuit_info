@@ -1,9 +1,5 @@
 <?php 
-
-session_name('pollexpress');
-session_start();
-
-require_once '/home/ann2/gaidot/public_html/PollExpress/config/BDD.php';
+require_once './config/BDD.php';
 
 if(!empty($_POST)){
 	extract($_POST);
