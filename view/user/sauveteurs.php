@@ -22,7 +22,7 @@ if(!empty($_POST)){
                     <?php
                     echo '<h4 class="card-title" style="height: 14px;">' . $donnees['nom_prenom'] . '</h4>';
 
-                    echo '<div class="icons"><a href="./index.php?action=detail&id=' . $donnees['id'] . '"><button class="btn btn-primary" style="width: 138px;height: 43px;font-size: 10px;background: #2e86de;">Consulter la page</button></a></div>';
+                    echo '<div class="icons"><a href="./index.php?action=detail&id=' . $donnees['idWiki'] . '"><button class="btn btn-primary" style="width: 138px;height: 43px;font-size: 10px;background: #2e86de;">Consulter la page</button></a></div>';
 
                     echo '<p class = "champSondage"><small style="padding: -0;text-align: left;width: 0;height: 0;margin: 0;">Sauvetages :&nbsp;' . $donnees['nb_sauvetages'] . '</small></p></div></div>';
 

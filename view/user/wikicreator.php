@@ -114,7 +114,11 @@ require_once './config/BDD.php';
       $req = $pdo->prepare("INSERT INTO NDI__SectionMoyenTechnique SET content = :moyen_technique, idWiki = :id");
       $req->execute(array('moyen_technique' => $moyen_technique, 'id' => $idWiki));}
 
+      if($type=='Sauveteur'){
+        $req = $pdo->prepare("INSERT INTO NDI__Sauveteurs SET nom_prenom = :nom, idWiki =:id");
+        $req->execute(array('nom' => $titre, 'id' => $idWiki));
 
+      }
 
       }
           
