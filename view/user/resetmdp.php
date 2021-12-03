@@ -71,6 +71,9 @@ if(!empty($_POST)){
                     <title>Mot de passe oublié</title>
           </head>
           <body>
+		  <br/><br/>
+			<br/><br/>
+			<br/><br/>
                     <div>Mot de passe oublié</div>
                     <form method="post">
                               <?php
