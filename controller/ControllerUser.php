@@ -46,12 +46,34 @@ class ControllerUser {
         
   }
 
+      public static function missions() {
+        $pagetitle = 'SauveteurExpress - Missions';
+        $controller='user';
+        $view='missions';
+        require File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
+        
+  }
+
 
 
    public static function resetmdp() {
        $controller='user';
        $view='resetmdp';
        $pagetitle='SauveteurExpress - Réinitialiser son mot de passe';
+       require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
+   }
+
+      public static function createpage() {
+       $controller='user';
+       $view='wikicreator';
+       $pagetitle='SauveteurExpress - Créer une page';
+       require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
+   }
+
+      public static function wikipage() {
+       $controller='user';
+       $view='wikipage';
+       $pagetitle='SauveteurExpress - Wiki';
        require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
    }
 
