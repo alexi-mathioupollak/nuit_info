@@ -11,9 +11,9 @@
 <br/>
 <br/>
 <form method="post">
-  <div class="mb-3"><label class="form-label" for="email"><strong>Identifiant</strong><br></label><?php $_SESSION['id'] ?></div>
-  <div class="mb-3"><label class="form-label" for="email"><strong>Pseudo</strong><br></label><?php $_SESSION['pseudo'] ?></div>
-  <div class="mb-3"><label class="form-label" for="email"><strong>Adresse Email</strong><br></label><?php $_SESSION['email'] ?></div>
+  <div class="mb-3"><label class="form-label" for="email"><strong style="margin-right: 10px;">Identifiant</strong><br></label><?= $_SESSION['id'] ?></div>
+  <div class="mb-3"><label class="form-label" for="email"><strong style="margin-right: 10px;">Pseudo</strong><br></label><?= $_SESSION['pseudo'] ?></div>
+  <div class="mb-3"><label class="form-label" for="email"><strong style="margin-right: 10px;">Adresse Email</strong><br></label><?= $_SESSION['email'] ?></div>
 
 </form>
 <a class="nav-link active" href="./index.php?action=resetmdp">Changer de mot de passe</a>
