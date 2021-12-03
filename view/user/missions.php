@@ -13,7 +13,7 @@ if(!empty($_POST)){
 
         $recherche = htmlentities(strtolower(trim($recherche)));
 
-                $reponse = $pdo->query('SELECT * FROM NDI_wiki WHERE titre_page LIKE "%' . $recherche . '%"' );
+                $reponse = $pdo->query('SELECT * FROM NDI__wiki WHERE titre_page LIKE "%' . $recherche . '%"' );
                 echo '<br><br><br><br><br><br><br><div class="row justify-content-center">';
                 while ($donnees = $reponse->fetch()) {
                     ?>

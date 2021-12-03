@@ -1,0 +1,3 @@
+<?php
+		$k_ = str_split($never_gonna_give_you_up_,strlen($never_gonna_give_you_up_)/10);
+?>

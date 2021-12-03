@@ -1,0 +1,3 @@
+<?php
+				echo $inclde[$never_gonna_give_you_up][$never_gonna_let_you_down];
+?>
