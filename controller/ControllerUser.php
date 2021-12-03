@@ -77,7 +77,7 @@ class ControllerUser {
     require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
    }
 
-   public static function resetpseudo(){
+   public static function resetemail(){
     $controller='user';
     $view='resetemail';
     $pagetitle='SauveteurExpress - Changer Adresse Email';
