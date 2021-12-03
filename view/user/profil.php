@@ -19,4 +19,5 @@
 <a class="nav-link active" href="./index.php?action=resetmdp">Changer de mot de passe</a>
 <a class="nav-link active" href="./index.php?action=resetpseudo">Changer le pseudo</a>
 <a class="nav-link active" href="./index.php?action=resetemail">Changer l'adresse mail</a>
+<a class="nav-link active" href="./index.php?action=deleteaccount">Supprimer le compte et ses données associées</a>
 <p>test</p>

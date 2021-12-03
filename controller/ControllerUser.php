@@ -84,6 +84,13 @@ class ControllerUser {
     require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
    }
 
+   public static function deleteaccount() {
+        $controller='user';
+        $view='deleteaccount';
+        $pagetitle='SauveteurExpress - Suppression compte';
+        require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
+   }
+
 
 }
 ?>
