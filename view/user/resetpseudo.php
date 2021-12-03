@@ -15,7 +15,7 @@ if(!empty($_POST)){
             'pseudo' => $_POST['pseudo'],
             'idu' => $_SESSION['id']
         ));
-        $req = $req->fetch()
+        $req = $req->fetch();
     }
 }
 
