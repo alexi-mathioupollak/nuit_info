@@ -18,7 +18,7 @@ if(!empty($_POST)){
                 while ($donnees = $reponse->fetch()) {
                     ?>
                     <div class="col-sm-6 col-lg-4" style="width: 228px;">
-                        <div class="card text-center clean-card"><img class="card-img-top w-100 d-block" src="./assets/img/base.png" style="height: 120.234px;">
+                        <div class="card text-center clean-card"><img class="card-img-top w-100 d-block" src="./assets/img/base.png" style="height: 255px;">
                     <?php
                     echo '<h4 class="card-title" style="height: 14px;">' . $donnees['nom_prenom'] . '</h4>';
 
@@ -64,7 +64,7 @@ if(!empty($_POST)){
                 while ($donnees = $reponse->fetch()) {
                     ?>
                    <div class="col-sm-6 col-lg-4" style="width: 228px;">
-                        <div class="card text-center clean-card"><img class="card-img-top w-100 d-block" src="./assets/img/base.png" style="height: 120.234px;">
+                        <div class="card text-center clean-card"><img class="card-img-top w-100 d-block" src="./assets/img/base.png" style="height: 160px;">
                     <?php
                     echo '<h4 class="card-title" style="height: 14px;">' . $donnees['nom_prenom'] . '</h4>';
 

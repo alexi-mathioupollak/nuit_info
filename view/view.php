@@ -16,8 +16,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="./assets/css/vanilla-zoom.min.css">
-    <link rel="stylesheet" href="./assets/css/accueil.css">
-    <link rel="stylesheet" href="./assets/css/boutique.css" >
 </head>
 
 <body>
@@ -31,6 +29,8 @@
                             ?>
                                 <li class="nav-item"><a class="nav-link active" href="./index.php">Accueil</a></li>
                                 <li class="nav-item"><a class="nav-link active" href="./index.php?action=sauveteurs">Sauveteurs</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="./index.php?action=missions">Articles</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="./index.php?action=createpage">Wiki</a></li>
                                 <li class="nav-item"><a class="nav-link active" href="./index.php?action=profil">Profil</a></li>
                                 <li class="nav-item"><a class="nav-link active" href="./index.php?action=deconnexion">Déconnexion</a></li>
 
@@ -38,6 +38,8 @@
                         }else{
                             ?>
                             <li class="nav-item"><a class="nav-link active" href="./index.php">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="./index.php?action=sauveteurs">Sauveteurs</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="./index.php?action=missions">Articles</a></li>
                             <li class="nav-item"><a class="nav-link active" href="./index.php?action=login">Connexion</a></li>
 
 
