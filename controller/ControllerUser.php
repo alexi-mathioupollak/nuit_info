@@ -73,14 +73,14 @@ class ControllerUser {
    public static function resetpseudo(){
     $controller='user';
     $view='resetpseudo';
-    $pagetitle='SauveteurExpress - Changer Pseudo';
+    $pagetitle='SauveteurExpress - Changer de Pseudo';
     require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
    }
 
    public static function resetemail(){
     $controller='user';
     $view='resetemail';
-    $pagetitle='SauveteurExpress - Changer Adresse Email';
+    $pagetitle='SauveteurExpress - Changer de Adresse Email';
     require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
    }
 
