@@ -70,6 +70,20 @@ class ControllerUser {
        require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
    }
 
+   public static function resetpseudo(){
+    $controller='user';
+    $view='resetpseudo';
+    $pagetitle='SauveteurExpress - Changer Pseudo';
+    require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
+   }
+
+   public static function resetpseudo(){
+    $controller='user';
+    $view='resetemail';
+    $pagetitle='SauveteurExpress - Changer Adresse Email';
+    require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
+   }
+
 
 }
 ?>
