@@ -64,15 +64,14 @@ if(!empty($_POST)){
 
 <!DOCTYPE html>
 <html lang="fr">
-          <head>
+        <head>
                     <meta charset="utf-8">
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
                     <meta name="viewport" content="width=device-width, initial-scale=1">
                     <title>Mot de passe oublié</title>
-          </head>
-          <body>
-		  <br/><br/>
-			<br/><br/>
+        </head>
+        <body>
+		<br/><br/>
 			<br/><br/>
                     <div>Mot de passe oublié</div>
                     <form method="post">

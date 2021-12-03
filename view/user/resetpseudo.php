@@ -32,7 +32,6 @@ if(!empty($_POST)){
     <body>
     <br/><br/>
     <br/><br/>
-    <br/><br/>
     <div>Changement de pseudo</div>
         <form method="post">
             <!-- <?php
