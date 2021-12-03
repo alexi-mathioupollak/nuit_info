@@ -11,4 +11,9 @@
 <a class="nav-link active" href="./index.php?action=resetpseudo">Changer le pseudo</a>
 <a class="nav-link active" href="./index.php?action=resetemail">Changer l'adresse mail</a>
 <a class="nav-link active" href="./index.php?action=deletedaccount">Supprimer le compte et ses données associées</a>
+<<<<<<< HEAD
 <p>test</p>
+=======
+<a class="nav-link active" href="./index.php?action=downloaded">Recevoir mes données par mail</a>
+<p>test</p>
+>>>>>>> origin/Felix
