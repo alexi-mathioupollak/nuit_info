@@ -52,8 +52,6 @@
       $_SESSION['email'] = htmlentities($resultat['email']);
       $_SESSION['date'] = htmlentities($resultat['date_creation']);
 
-
-
       header('Location: ./index.php'); //on redirige l'utilisateur vers la page d'accueil
       exit;
     }

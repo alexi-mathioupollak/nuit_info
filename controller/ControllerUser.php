@@ -33,7 +33,7 @@ class ControllerUser {
       public static function profil() {
         $pagetitle = 'SauveteurExpress - Profil';
         $controller='user';
-        $view='login';
+        $view='profil';
         require File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
         
   }
@@ -68,6 +68,27 @@ class ControllerUser {
        $view='sauveteurs';
        $pagetitle='SauveteurExpress - Sauveteurs';
        require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
+   }
+
+   public static function resetpseudo(){
+    $controller='user';
+    $view='resetpseudo';
+    $pagetitle='SauveteurExpress - Changer Pseudo';
+    require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
+   }
+
+   public static function resetemail(){
+    $controller='user';
+    $view='resetemail';
+    $pagetitle='SauveteurExpress - Changer Adresse Email';
+    require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
+   }
+
+   public static function deleteaccount() {
+        $controller='user';
+        $view='deleteaccount';
+        $pagetitle='SauveteurExpress - Suppression';
+        require_once File::build_path(array("view","view.php")); ;  //"redirige" vers la vue
    }
 
 
