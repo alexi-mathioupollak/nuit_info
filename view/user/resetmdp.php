@@ -18,7 +18,7 @@ if(!empty($_POST)){
 			$er_email = "Email vide";
 		}
 
-		$stmt = $pdo->prepare("SELECT * FROM User WHERE email=?");
+		$stmt = $pdo->prepare("SELECT * FROM NDI_User WHERE email=?");
 		$stmt->execute([$email]); 
 		$req_email = $stmt->fetch();
 		
@@ -28,7 +28,7 @@ if(!empty($_POST)){
         } 
 
 		if($ok){
-			$verif_mail = $pdo->prepare("SELECT * FROM User WHERE email = :email");
+			$verif_mail = $pdo->prepare("SELECT * FROM NDI_User WHERE email = :email");
 			$verif_mail->execute(array('email' => $email));
     		$verif_mail = $verif_mail->fetch();
 

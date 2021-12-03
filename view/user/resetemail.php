@@ -10,7 +10,7 @@ if(!empty($_POST)){
 	$ok = true;
 
 	if (isset($_POST['resetemail'])){
-        $req = $pdo->prepare("UPDATE User SET email = :email WHER idUser:idu");
+        $req = $pdo->prepare("UPDATE NDI_User SET email = :email WHER idUser:idu");
         $req->execute(array(
             'email' => $_POST['email'],
             'idu' => $_SESSION['id']
