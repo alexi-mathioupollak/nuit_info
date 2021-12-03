@@ -34,7 +34,7 @@ Ces sauveteurs, habitants du dunkerquois (de Bray-Dunes à Grand-Fort-Philippe),
     </main>
 
     <footer>
-        <a href="/home/felix/site_nuit_info/nuit_info/assets/img/meme_easteregg.jpg" >meme</a>
+        <a href="/home/ann2/rivalsf/public_html//nuit_info/assets/img/meme_easteregg.jpg" >meme</a>
     </footer>
 
 </div>
